@@ -1,0 +1,6 @@
+home north_field,500 south_field,300 fig_tree,50 desert,2000
+north_field home,500 desert,1500
+south_field well,700 home,300 fig_tree,250 desert,1700
+fig_tree home,50 south_field,250
+well south_field,700 desert,1000
+desert

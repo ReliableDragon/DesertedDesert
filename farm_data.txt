@@ -1,0 +1,5 @@
+home|your house|It's a familiar house, built by your great-grandfather. It's sheltered your family ever since.
+north_field|the north field|The larger, but less fertile, of your two wheat fields.
+south_field|the south field|The smaller, but more fertile, of your two wheat fields.
+fig_tree|a fig tree|A single solitary fig tree.
+well|a well|An old, cracked, clay well. A bucket on a rope sits next to it.
