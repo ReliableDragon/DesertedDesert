@@ -1,13 +1,15 @@
 from location import Location
+from item import Item
 
 import os
 import sys
 
 class Map(object):
-  def __init__(self, map_filename, data_filename):
+  def __init__(self, map_filename, map_descriptions_filename, items_filename, items_map_filename):
     self._locations = {}
     self._distances = {}
-    with open(os.path.join(sys.path[0], data_filename), 'r') as f:
+    self._items = {}
+    with open(os.path.join(sys.path[0], map_descriptions_filename), 'r') as f:
       for line in f:
         key,printable_name,name,description,atmosphere = line.strip().split("|")
         self._locations[key] = Location(key, printable_name, name, description, atmosphere)
@@ -17,6 +19,14 @@ class Map(object):
         key = data[0]
         distances = map(lambda s: s.split(","), data[1:])
         self._distances[key] = {to: distance for (to, distance) in distances}
+    with open(os.path.join(sys.path[0], items_filename), 'r') as f:
+      for line in f:
+        key,printable_name,name,description = line.strip().split('|')
+        self._items[key] = Item(key, printable_name, name, description)
+    with open(os.path.join(sys.path[0], items_map_filename), 'r') as f:
+      for line in f:
+        loc,item = line.strip().split(' ')
+        self._locations[loc].items.append(self._items[item])
         
   def __repr__(self):
     rep = "<Map "
@@ -45,5 +55,11 @@ class Map(object):
     return self._locations[loc].atmosphere
   
   def get_visible(self, loc):
-    return [destination for destination, _ in self._distances[loc].items()]
+    return [self._locations[destination] for destination, _ in self._distances[loc].items()]
+  
+  def get_items(self, loc):
+    return self._locations[loc].items
+  
+  def get_item(self, key):
+    return self._items[key]
     

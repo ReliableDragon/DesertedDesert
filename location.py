@@ -5,6 +5,12 @@ class Location(object):
     self.name = name  # Name players will use to target
     self.description = description  # Description when viewed from elsewhere
     self.atmosphere = atmosphere  # Description when player is there
+    self.items = []
     
   def __repr__(self):
-    return "<Location ({0}, {1}, {2}, {3}, {4})".format(self.key, self.printable_name, self.name, self.description, self.atmosphere)
+    desc = "<Location ({0}, {1}, {2}, {3}, {4}) items: ["\
+           .format(self.key, self.printable_name, self.name, self.description, self.atmosphere)
+    for item in self.items:
+      desc += "{0}, ".format(item)
+    desc += "]>"
+    return desc

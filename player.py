@@ -9,7 +9,7 @@ class Player(object):
     self.inventory = {}
     
   def print_stats(self):
-    print("Name: {0}\nLocation: {1}".format(self.name, self.location))
+    print("Name: {0}\nLocation: {1}\nItems: {2}".format(self.name, self.location, self.inventory))
     
   def give(self, item):
     self.inventory[item.key] = item
