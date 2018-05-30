@@ -23,13 +23,14 @@ def print_help():
     print("{0}: {1}".format(k, v))
     
 def print_stats():
-  game.print_stats()
+  game.player.print_stats()
   
 def print_exit():
   print("Goodbye!")
   
 def print_map():
-  game.print_map()
+  print(game.map)
+  print("Player location: {0}".format(game.player.location))
 
 commands = {
   '/help': print_help,
@@ -51,9 +52,7 @@ def run_game():
     if command in commands:
       commands[command]()
     else:
-      succeeded = game.process_input(command)
-      if not succeeded:
-        print("I'm sorry, I don't understand. Try something else, or /help for help.")
+      game.process_input(command)
   
 if __name__ == '__main__':
   # name = input("What is your name?\n")

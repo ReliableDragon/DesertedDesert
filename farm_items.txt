@@ -1,0 +1,4 @@
+basic_clothing|a set of loose robes|robes|A set of plain desert robes.
+bucket|a bucket|bucket|A plain bucket.
+full_bucket|a full bucket|bucket|A bucket full of water.
+hoe|a hoe|hoe|A hoe, for gardening.

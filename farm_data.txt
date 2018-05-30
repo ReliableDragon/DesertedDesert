@@ -1,5 +1,7 @@
-home|your house|It's a familiar house, built by your great-grandfather. It's sheltered your family ever since.
-north_field|the north field|The larger, but less fertile, of your two wheat fields.
-south_field|the south field|The smaller, but more fertile, of your two wheat fields.
-fig_tree|a fig tree|A single solitary fig tree.
-well|a well|An old, cracked, clay well. A bucket on a rope sits next to it.
+home|your house|house|It's your house|You're in front of a familiar claybrick house, built by your great-grandfather. It has sheltered your family ever since.
+north_field|the north field|north field|The larger, but less fertile, of your two wheat fields.|Half-ripe grain sways around you in the wind, looking somewhat dried out in the sandy soil.
+south_field|the south field|south field|The smaller, but more fertile, of your two wheat fields.|Healthy, vibrant stalks of grain grow all around you, and the soil is damp underfoot.
+fig_tree|a fig tree|tree|A single solitary fig tree.|The fig tree creaks and groans in the hot desert wind, branches filled with ripe figs. You enjoy the shade it brings.
+well|a well|well|An old, cracked, clay well.|You stand in front of a claybrick well, a bucket on a rope siting next to it. At the bottom you can see a few feet of warm water.
+near_desert|the desert|desert|A seemingly endless expanse of sand, stretching in every direction as far as the eye can see.|The sun beats down, as the hot wind whips your clothing around. You can just make out your house in the distance; every other direction is nothing but endless dunes.
+far_desert|the desert|desert|A seemingly endless expanse of sand, stretching in every direction as far as the eye can see.|The sun beats down, as the hot wind whips your clothing around. All you can see in every direction is endless dunes.
