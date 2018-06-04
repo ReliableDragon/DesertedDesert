@@ -1,5 +1,4 @@
 # DesertedDesert
-A text based adventure I may or may not keep working on.
+A framework for text-based adventures, with a basic demo involving a farm in a desert.
 
-Pretty vanilla. Type things, stuff happens.
-Not much to do at the moment. You can slap a chicken though, so that's fun.
+To build your own adventure, clone this repository and replace the map data in the text files with whatever your game requires, then replace the item_fns.py file with actions appropriate for your game. Replace the intro paragraph, and you've got your onw text adventure!

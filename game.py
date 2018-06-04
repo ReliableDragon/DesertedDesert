@@ -21,7 +21,7 @@ class Game(object):
     return True
   
   def describe(self, target):
-    if not target:
+    if not target:  # Describe the current location.
       print(self.map.get_atmosphere(self.player.location))
       return True
     print(self.get_description(target))
@@ -109,7 +109,7 @@ class Game(object):
     print(setting)
     print("What do you do?")
 
-  # Fixes pronouns.
+  # Fixes pronouns and extra spaces.
   def process_text(self, text):
     text = text.replace("$HE", "he" if self.is_male() else "she")
     text = text.replace("$HIS", "his" if self.is_male() else "her")
